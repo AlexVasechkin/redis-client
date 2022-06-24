@@ -10,7 +10,7 @@ class Client
 {
     private $redis;
 
-    public function __constructor(string $dsn)
+    public function __construct(string $dsn)
     {
         $this->redis = new Predis\Client($dsn);
     }
