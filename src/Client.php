@@ -64,4 +64,24 @@ class Client
     {
         return $this->redis->lrange($key, $start, $stop);
     }
+
+    public function sadd(string $key, array $valueList): int
+    {
+        return $this->redis->sadd($key, $valueList);
+    }
+
+    public function scard(string $key): int
+    {
+        return $this->redis->scard($key);
+    }
+
+    public function smembers(string $key): array
+    {
+        return $this->redis->smembers($key);
+    }
+
+    public function srem(string $key, string $item): int
+    {
+        return $this->redis->srem($key, $item);
+    }
 }
